@@ -6,7 +6,161 @@
     <title>Ejercicio buenas practicas</title>
 </head>
 <body>
+<!-- PRIMERA CORRECION
+    <html>
+<body>
+  <div>
+  <h1>Welcome to my page!</h1>
+  <p>Here you will find all sorts of interesting information</p>
+      </div>
+  <div>
+  <h2>About me 
+  </h2>
+      <p>I am a developer who loves to create websites and apps. 
+        I also enjoy playing video games and reading books 
+        in my spare time.
+</div>
+</body>
+</html>
+
+    <!-- RESULTADO -->
+    <div>
+        <h1>Welcome to my page!</h1>
+        <p>Here you will find all sorts of 
+          interesting information
+        </p>
+    </div>
+    <div>
+        <h2>About me</h2>
+        <p>I am a developer who loves to create websites and apps. 
+          I also enjoy playing video games and reading books 
+          in my spare time.
+        </p>
+    </div>
+
+    <script>
+   /* EJERCICIO 2
+    function calc(nums) {
+    let total = 0;
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] > 0) {
+        total += nums[i];
+      }
+    }
+    return total;
+    }     
+      const numbers = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10];
+      console.log(calc(numbers)); */
     
+      function sumPositiveNumbers(numbers) {
+        let positiveSum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+       if (numbers[i] > 0) {
+         positiveSum += numbers[i];
+          }
+        }
+          return positiveSum;
+       }
+        const numbers = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10];
+     console.log(sumPositiveNumbers(numbers));  
+
+
+     /* EJERCICIO 3
+     
+     let result = 0;
+
+    function add(x, y) {
+      result = x + y;
+    }
+
+    function subtract(x, y) {
+      result = x - y;
+    }
+
+    function accumulate(x) {
+        result += x;
+    }
+
+    add(5, 10);
+    console.log(result);
+    accumulate(6);
+    subtract(6, 12);
+    console.log(result); */
+
+
+    function add(x, y) {
+    return x + y;
+   }
+     function subtract(x, y) {
+     return x - y;
+   }
+    const result = add(5, 10);
+    console.log(result);
+    const accumulate = add(result, 6);
+    console.log(subtract(accumulate, 12));
+
+
+
+    /* EJERCICIO 4
+    function isOldEnoughToDrive(age) {
+       if (age >= 16) {
+         return "Yes"
+       } else {
+         return "No";
+       }
+    } */
+    function isOldEnoughToDrive(age) {
+       if (age >= 16) return "Yes"
+       return "No";
+    }
+
+    console.log(isOldEnoughToDrive(30))
+
+
+   /* EJERCICIO 5
+    function numberIsDivisible(num) {
+  if (num > 0) {
+    if (num % 2 === 0) {
+      if (num % 3 === 0) {
+        return "Divisible by 2 and 3";
+      } else {
+        return "Divisible by 2";
+      }
+    } else {
+      if (num % 3 === 0) {
+        return "Divisible by 3";
+      } else {
+        return "Not divisible by 2 or 3";
+      }
+    }
+  } else {
+    return "Number is not positive";
+  }
+} */
+
+
+function numberIsDivisible(num) {
+  if (num <= 0) {
+    return "Number is not positive";
+  }
+  if (num % 2 === 0 && num % 3 === 0) {
+    return "Divisible by 2 and 3";
+  }
+  if (num % 2 === 0) {
+    return "Divisible by 2";
+  }
+  if (num % 3 === 0) {
+    return "Divisible by 3";
+  }
+  return "Not divisible by 2 or 3";
+}
+
+
+
+
+   
+    </script>
+
     
 </body>
 </html>
